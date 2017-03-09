@@ -1,12 +1,13 @@
-# karma-rollup-plugin [![Build Status](https://travis-ci.org/TrySound/karma-rollup-plugin.svg?branch=master)](https://travis-ci.org/TrySound/karma-rollup-plugin)
+# karma-handroll [![Build Status](https://travis-ci.org/TrySound/karma-handroll.svg?branch=master)](https://travis-ci.org/TrySound/karma-handroll)
 
-> A Karma preprocessor plugin to offer seamless integration with [rollup](http://rollupjs.org/)
+> A Karma preprocessor plugin which integrates [handroll](http://github.com/zeekay/handroll)
 
-This plugin is a Karma preprocessor to compile and bundle your spec entry point on the fly. It works seamless with all Rollup plugins.
+This plugin is a Karma preprocessor to compile and bundle your spec entry point
+on the fly. It works seamlessly with all handroll plugins.
 
 # Features
 
-  - supports Rollup by default
+  - supports handroll by default
   - supports both Babel and Buble as the ES2015 compiler
   - sourceMap
   - recompiling of dependencies when files changes
@@ -14,10 +15,10 @@ This plugin is a Karma preprocessor to compile and bundle your spec entry point 
 
 # Installation
 
-The easiest way is to keep karma-rollup-plugin as a `devDependency`. You can simple do it by:
+The easiest way is to keep karma-handroll as a `devDependency`. You can simple do it by:
 
 ```js
-npm i karma-rollup-plugin --save-dev
+npm i karma-handroll --save-dev
 ```
 
 # Configuration
@@ -31,12 +32,12 @@ Following code shows the default configuration
 module.exports = function (config) {
   config.set({
     preprocessors: {
-     'test/**/*.js': ['rollup']
+     'test/**/*.js': ['handroll']
     },
-    rollupPreprocessor: {
-      // rollup settings. See Rollup documentation
+    // handroll settings. See handroll documentation
+    handroll: {
       plugins: [
-        buble() // ES2015 compiler by the same author as Rollup
+        buble() // ES2015 compiler by the same author as handroll
       ],
       // will help to prevent conflicts between different tests entries
       format: 'iife',
@@ -45,5 +46,3 @@ module.exports = function (config) {
   });
 };
 ```
-
-See [Rollup documentation - JavaScript API](https://github.com/rollup/rollup/wiki/JavaScript-API) for more details.
