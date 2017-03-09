@@ -2,6 +2,7 @@ import handroll from 'handroll'
 
 SOURCEMAPPING_URL = 'sourceMappingURL'
 
+
 createHandroll = (args, opts = {}, logger) ->
   log = logger.create('preprocessor.handroll')
 
@@ -9,8 +10,8 @@ createHandroll = (args, opts = {}, logger) ->
     log.debug 'Processing "%s".', file.originalPath
     try
       opts.entry = file.originalPath
-      handroll(opts).then (bundle) ->
-        {code, map} = bundle.generate(opts);
+      handroll.bundle(opts).then (bundle) ->
+        {code, map} = bundle.generate opts
         if opts.sourceMap == 'inline'
           code += '\n//# ' + SOURCEMAPPING_URL + '=' + map.toUrl()
         if opts.sourceMap

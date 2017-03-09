@@ -33,13 +33,13 @@
   },
   "homepage": "https://github.com/zeekay/karma-handroll",
   "dependencies": {
-    "cake-publish": "0.1.5",
-    "cake-version": "0.1.9",
     "handroll": "^0.x"
   },
   "devDependencies": {
+    "cake-publish": "0.1.5",
+    "cake-version": "0.1.9",
     "chai": "^3.5.0",
-    "handroll": "0.4.2",
+    "handroll": "0.4.4",
     "karma": "^1.2.0",
     "karma-chai": "^0.1.0",
     "karma-mocha": "^1.1.1",
