@@ -1,6 +1,6 @@
 {
   "name": "karma-handroll",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Karma preprocessor plugin to offer seamless integration with Handroll",
   "main": "dist/karma-handroll.js",
   "author": "Zach Kelling <z@zeekay.io>",
